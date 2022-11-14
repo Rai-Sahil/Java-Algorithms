@@ -1,5 +1,7 @@
 package Sorting;
 
+import java.util.Random;
+
 public class QuickSort {
 
     private static void swap(int[] arr, int i, int j){
@@ -12,7 +14,10 @@ public class QuickSort {
         if(lowIndex >= highIndex){
             return;
         }
-        int pivot = arr[highIndex];
+
+        int pivotIndex = new Random().nextInt(highIndex - lowIndex) + lowIndex;
+        int pivot = arr[pivotIndex];
+        swap(arr, pivotIndex, highIndex);
 
         int leftPoint = lowIndex;
         int rightPoint = highIndex;
