@@ -1,4 +1,4 @@
-package org.example.GenericandLinkedListPractice.LinkedListImplementation;
+package LinkedListImplementation;
 
 public class LinkedList <K>{
     //TODO Every list will have 1 thing which will be Node

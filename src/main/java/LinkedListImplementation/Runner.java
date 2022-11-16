@@ -1,4 +1,4 @@
-package org.example.GenericandLinkedListPractice.LinkedListImplementation;
+package LinkedListImplementation;
 
 public class Runner {
     public static void main(String[] args){

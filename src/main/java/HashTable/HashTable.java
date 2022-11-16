@@ -1,5 +1,6 @@
 package HashTable;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -60,6 +61,68 @@ public class HashTable {
         }
         return null;
     }
+
+    public boolean isPrime(int number){
+        if(number % 2 ==0){
+            return false;
+        }
+
+        for (int i = 3; i * i <= number; i+=2){
+            if(number % i ==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public int getNextPrime(int minNumberToCheck){
+        for(int i = minNumberToCheck; true; i++){
+            if(isPrime(i)){
+                return i;
+            }
+        }
+    }
+
+    public void increaseArraySize(int minArraySize){
+        int newArraySize = getNextPrime(minArraySize);
+        moveOldArray(newArraySize);
+    }
+
+    public void moveOldArray(int newAraySize){
+        String[] cleanArray = removeEmptySpacesInArray(theArray);
+        theArray = new String[newAraySize];
+        arraySize = newAraySize;
+        Arrays.fill(theArray, "-1");
+        hashFunction2(cleanArray, theArray);
+    }
+
+    private String[] removeEmptySpacesInArray(String[] arrayToClean) {
+        ArrayList<String> stringList = new ArrayList<>();
+        for (String theString : arrayToClean){
+            if(!theString.equals("-1") && !theString.equals("")){
+                stringList.add(theString);
+            }
+        }
+        return stringList.toArray(new String[stringList.size()]);
+    }
+
+
+    public static void main(String[] args){
+        //*Using prime number for size decreases collision
+        HashTable thefunc = new HashTable(31);
+//        String[] element = {"1", "3", "5", "21" , "19"};
+//
+//        thefunc.hashFunction(element, thefunc.theArray);
+
+        String[] elementsInFunc2 = {"100", "123" ,"543", "101", "654" ,"243", "199", "299" ,"99", "74", "23" ,"87"};
+
+        thefunc.hashFunction2(elementsInFunc2, thefunc.theArray);
+        thefunc.increaseArraySize(61);
+        thefunc.findKey("101");
+
+        thefunc.displayTheStack();
+    }
+
     void displayTheStack(){
         int increment = 0;
 
@@ -96,19 +159,5 @@ public class HashTable {
             }
             System.out.println();
         }
-    }
-
-    public static void main(String[] args){
-        HashTable thefunc = new HashTable(30);
-//        String[] element = {"1", "3", "5", "21" , "19"};
-//
-//        thefunc.hashFunction(element, thefunc.theArray);
-
-        String[] elementsInFunc2 = {"100", "123" ,"543", "101", "654" ,"243", "199", "299" ,"99", "74", "23" ,"87"};
-
-        thefunc.hashFunction2(elementsInFunc2, thefunc.theArray);
-        thefunc.findKey("101");
-
-        thefunc.displayTheStack();
     }
 }
