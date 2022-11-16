@@ -1,6 +1,6 @@
 package Sorting;
 
-public class MergeSort {
+public class MergeSort<T> {
 
     private static void mergeSort(int[] array){
         int length = array.length;

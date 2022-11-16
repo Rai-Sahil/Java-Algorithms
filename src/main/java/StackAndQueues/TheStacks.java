@@ -2,9 +2,10 @@ package StackAndQueues;
 
 import java.util.Arrays;
 
-public class TheStacks {
+//!Ask Paul if is there a way to not give stack size
+public class TheStacks <T>{
 
-    private String[] stackArray;
+    private T[] stackArray;
 
     private int stackSize;
 
@@ -12,11 +13,11 @@ public class TheStacks {
 
     TheStacks(int size){
         stackSize = size;
-        stackArray = new String[size];
+        stackArray = (T[]) new Object[stackSize];
         Arrays.fill(stackArray, "-1");
     }
 
-    public void push(String input){
+    public void push(T input){
         if(topOfStack + 1 < stackSize){
             topOfStack++;
             stackArray[topOfStack] = input;
@@ -27,23 +28,23 @@ public class TheStacks {
         System.out.println("PUSH " + input + " was added to the stack");
     }
 
-    public String pop(){
+    public T pop(){
         if(topOfStack >= 0){
             displayTheStack();
             System.out.println("POP " + stackArray[topOfStack] + " was removed from the stack");
-            stackArray[topOfStack] = "-1";
+            stackArray[topOfStack] = (T)"-1";
 
             return stackArray[topOfStack--];
         } else{
             displayTheStack();
             System.out.println("Sorry the stack is empty");
-            return "-1";
+            return (T)"-1";
         }
     }
 
     public void popAt(int index){
         if(topOfStack >= 0){
-                stackArray[index] ="-1";
+                stackArray[index] = (T)"-1";
             displayTheStack();
         }else{
             displayTheStack();
@@ -51,7 +52,7 @@ public class TheStacks {
         }
     }
 
-    public String peek(){
+    public T peek(){
         displayTheStack();
         System.out.println("PEEK " + stackArray[topOfStack] + " is at the top of the stack");
         return stackArray[topOfStack];
@@ -61,7 +62,7 @@ public class TheStacks {
         String[] tempString = multi.split(" ");
 
         for (int i = 0; i< tempString.length; i++){
-            push(tempString[i]);
+            push((T) tempString[i]);
         }
     }
 
@@ -69,6 +70,7 @@ public class TheStacks {
         for (int i = topOfStack; i >= 0; i--){
             pop();
         }
+        displayTheStack();
     }
     public void displayTheStack(){
         for (int n = 0; n < 61; n++){System.out.print("-");}
@@ -94,7 +96,7 @@ public class TheStacks {
 
     public static void main(String[] args){
 
-        TheStacks stack = new TheStacks(10);
+        TheStacks<String> stack = new TheStacks<>(10);
         stack.push("10");
         stack.push("15");
         stack.pushMany("2 45 65 76 89");

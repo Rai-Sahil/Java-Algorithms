@@ -1,14 +1,14 @@
 package BinarySearchTree;
 
-public class Node {
+public class Node <K, V> {
 
-    int key;
-    String name;
+    K key;
+    V name;
 
     Node leftChild;
     Node rightChild;
 
-    Node (int key, String name){
+    public Node (K key, V name){
         this.key = key;
         this.name = name;
     }

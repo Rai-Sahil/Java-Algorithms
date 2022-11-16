@@ -2,7 +2,7 @@ package FileIO;
 
 import java.io.*;
 
-class Main {
+class Main<K, V> {
     public static void main(String []args){
         try{
             BufferedWriter bc = new BufferedWriter(

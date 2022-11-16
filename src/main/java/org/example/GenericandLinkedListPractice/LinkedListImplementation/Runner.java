@@ -2,7 +2,7 @@ package org.example.GenericandLinkedListPractice.LinkedListImplementation;
 
 public class Runner {
     public static void main(String[] args){
-        LinkedList list = new LinkedList();
+        LinkedList<Integer> list = new LinkedList<>();
 
         list.insert(5);
         list.insert(10);

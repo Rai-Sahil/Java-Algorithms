@@ -1,6 +1,6 @@
 package org.example.GenericandLinkedListPractice.LinkedListImplementation;
 
-public class Node {
-    int data;
+public class Node<K> {
+    K data;
     Node next;
 }

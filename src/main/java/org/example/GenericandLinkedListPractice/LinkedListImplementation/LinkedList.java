@@ -1,12 +1,12 @@
 package org.example.GenericandLinkedListPractice.LinkedListImplementation;
 
-public class LinkedList {
+public class LinkedList <K>{
     //TODO Every list will have 1 thing which will be Node
     //*First node will always be head.
     Node head;
 
     //TODO the first method will be insert which insert a value inside linkedlist
-    public void insert(int data) {
+    public void insert(K data) {
         //Instantiating a new node.
         Node node = new Node();
         //The data of that new node will be data user provided
@@ -41,14 +41,14 @@ public class LinkedList {
 
     }
 
-    public void insertStart(int data) {
+    public void insertStart(K data) {
         Node node = new Node();
         node.data = data;
         node.next = head;
         head = node;
     }
 
-    public void insertAt(int index, int data){
+    public void insertAt(int index, K data){
         //Create a new node. Its data should be data passed by user and the next value should be null.
         //So it's just one node or one box with data and next value as null
         Node node = new Node();

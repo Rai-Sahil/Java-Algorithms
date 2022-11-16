@@ -6,9 +6,9 @@ import java.util.Arrays;
 /**
  * Queues allows us to access the first person inserted in the array
  */
-public class TheQueues {
+public class TheQueues<V> {
 
-    private String[] queueArray;
+    private V[] queueArray;
 
     private int queueSize;
 
@@ -16,11 +16,11 @@ public class TheQueues {
 
     TheQueues(int size){
         queueSize = size;
-        queueArray = new String[size];
+        queueArray = (V[]) new Object[queueSize];
         Arrays.fill(queueArray, "-1");
     }
 
-    public void insert(String input){
+    public void insert(V input){
         if(numberOfItems + 1 <= queueSize) {
             queueArray[rear] = input;
             rear++;
@@ -32,7 +32,7 @@ public class TheQueues {
     public void removeItems(){
         if (numberOfItems > 0){
             System.out.println("REMOVE " + queueArray[front]);
-            queueArray[front] = "-1";
+            queueArray[front] = (V)"-1";
             front--;
             numberOfItems--;
         } else{
@@ -40,18 +40,20 @@ public class TheQueues {
         }
     }
 
-    public String peek(){
+    public V peek(){
         System.out.println("The first item is " + queueArray[front]);
-        return queueArray[front];
+        V value = queueArray[front];
+        return value;
     }
 
-    public void priorityInsert(String input){
+    public void priorityInsert(V input){
         int i;
         if(numberOfItems == 0){
             insert(input);
         } else{
             for(i = numberOfItems -1; i >= 0; i--){
-                if(Integer.parseInt(input) > Integer.parseInt(queueArray[i])){
+                //! Ask paul why to cast String
+                if(Integer.parseInt((String) input) > Integer.parseInt((String) queueArray[i])){
                     queueArray[i+1] = queueArray[i];
                 } else break;
             }
@@ -85,10 +87,12 @@ public class TheQueues {
 
     public static void main(String[] args){
         TheQueues queue = new TheQueues(10);
-        queue.priorityInsert("10");
-        queue.priorityInsert("11");
-        queue.priorityInsert("12");
-        queue.priorityInsert("9");
+        queue.insert("10");
+        queue.insert("11");
+        queue.insert("12");
+        queue.insert("9");
+
+        queue.peek();
 
         queue.displayTheStack();
         queue.removeItems();

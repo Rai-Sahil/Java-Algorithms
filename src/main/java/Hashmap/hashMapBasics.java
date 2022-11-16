@@ -22,7 +22,6 @@ public class hashMapBasics {
         int i = hash.hashCode();
         System.out.println(i);
 
-        System.out.println(hash);
 
     }
 }

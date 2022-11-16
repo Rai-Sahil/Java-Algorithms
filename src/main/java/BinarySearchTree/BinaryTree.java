@@ -1,6 +1,6 @@
 package BinarySearchTree;
 
-public class BinaryTree {
+public class BinaryTree<K, V> {
 
     //Every single tree no matter what it is will have a root value
     Node root;
@@ -14,7 +14,7 @@ public class BinaryTree {
      * it is then make leftChild the focusNode otherwise make rightChild the focusNode. Once, the
      * perfect spot is found and it's null, put the newNode at that position using parentNode.side_child
      */
-    public void addNode(int key, String name){
+    public <K extends Comparable> void addNode(K key, V name){
         //TODO create a new node(One box), with parameters same as passed by user
         Node newNode = new Node(key, name);
 
@@ -38,7 +38,7 @@ public class BinaryTree {
                 parent = focusNode;
 
                 //If the key entered is smaller by focusnode, put the key in the left until you did not hit the null
-                if(key < focusNode.key){
+                if(key.compareTo(focusNode.key) < 0){
                     //TODO put the node at the left side of the focus node in focus.
                     focusNode = focusNode.leftChild;
 
@@ -54,6 +54,7 @@ public class BinaryTree {
 
                     //If the right node is null give that the key value.
                     if(focusNode == null){
+                        //Parent should always be inside for loop.
                         parent.rightChild = newNode;
                         return;
                     }
@@ -67,14 +68,14 @@ public class BinaryTree {
      * a while loop and if the key is smaller go left otherwise right, by changing the focusNode value to
      * preferred side. Once the key is equal to focusNode.key end the while loop and return that node.
      */
-    public Node findNode(int key){
+    public <K extends Comparable> Node findNode(K key){
         //TODO create a new node as focusNode with value root
         Node focusNode = root;
 
         //TODO start a while loop, until the is not equal to focusNode.key
         while(key != focusNode.key){
             //TODO if the focus node is smaller then key, go to the left node of focus node and transfer that left node to focusNode
-            if (key < focusNode.key){
+            if (key.compareTo(focusNode.key) < 0){
                 focusNode = focusNode.leftChild;
             }
             //TODO else go to the right node of focusNode and transfer that right node to focusNode
@@ -94,7 +95,7 @@ public class BinaryTree {
 
 
     //? ASK PAUL...
-    public boolean remove(int key) {
+    public <K extends Comparable> boolean remove(K key) {
         Node focusNode = root;
         Node parent = root;
 
@@ -103,7 +104,7 @@ public class BinaryTree {
         while (focusNode.key != key) {
             parent = focusNode;
 
-            if (key < focusNode.key) {
+            if (key.compareTo(focusNode.key) < 0) {
                 isItALeftChild = true;
                 focusNode = focusNode.leftChild;
             } else {
@@ -213,7 +214,7 @@ public class BinaryTree {
     }
 
     public static void main(String[] args){
-        BinaryTree theTree = new BinaryTree();
+        BinaryTree<Integer, String> theTree = new BinaryTree<>();
 
         theTree.addNode(25, "Vice pres");
         theTree.addNode(50, "Boss");
