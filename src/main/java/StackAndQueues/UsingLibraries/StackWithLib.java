@@ -7,6 +7,7 @@ import java.util.Stack;
  */
 public class StackWithLib {
 
+    //Last Element is first
     public static void main(String[] args){
         Stack<Integer> stack = new Stack<>();
         stack.push(14);
