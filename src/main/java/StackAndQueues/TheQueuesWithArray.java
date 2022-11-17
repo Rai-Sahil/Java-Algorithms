@@ -1,12 +1,11 @@
 package StackAndQueues;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
  * Queues allows us to access the first person inserted in the array
  */
-public class TheQueues<V> {
+public class TheQueuesWithArray<V> {
 
     private V[] queueArray;
 
@@ -14,7 +13,7 @@ public class TheQueues<V> {
 
     private int front, rear, numberOfItems = 0;
 
-    TheQueues(int size){
+    TheQueuesWithArray(int size){
         queueSize = size;
         queueArray = (V[]) new Object[queueSize];
         Arrays.fill(queueArray, "-1");
@@ -86,7 +85,7 @@ public class TheQueues<V> {
     }
 
     public static void main(String[] args){
-        TheQueues queue = new TheQueues(10);
+        TheQueuesWithArray queue = new TheQueuesWithArray(10);
         queue.insert("10");
         queue.insert("11");
         queue.insert("12");

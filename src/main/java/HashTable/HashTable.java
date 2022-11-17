@@ -92,8 +92,12 @@ public class HashTable {
         String[] cleanArray = removeEmptySpacesInArray(theArray);
         theArray = new String[newAraySize];
         arraySize = newAraySize;
-        Arrays.fill(theArray, "-1");
+        fillArrayWithNeg1();
         hashFunction2(cleanArray, theArray);
+    }
+
+    public void fillArrayWithNeg1(){
+        Arrays.fill(theArray, "-1");
     }
 
     private String[] removeEmptySpacesInArray(String[] arrayToClean) {
@@ -109,15 +113,17 @@ public class HashTable {
 
     public static void main(String[] args){
         //*Using prime number for size decreases collision
-        HashTable thefunc = new HashTable(31);
+        HashTable thefunc = new HashTable(62);
 //        String[] element = {"1", "3", "5", "21" , "19"};
 //
 //        thefunc.hashFunction(element, thefunc.theArray);
 
-        String[] elementsInFunc2 = {"100", "123" ,"543", "101", "654" ,"243", "199", "299" ,"99", "74", "23" ,"87"};
+        String[] elementsInFunc2 = {"100", "123" ,"543", "101", "654" ,"243", "199", "999" ,"99", "74", "23" ,"87",
+                "235", "802", "900", "723", "699", "1", "16", "999", "890", "235", "802", "900", "723", "699", "1", "16", "890",
+                "100", "510", "170", "214", "268", "398"};
 
         thefunc.hashFunction2(elementsInFunc2, thefunc.theArray);
-        thefunc.increaseArraySize(61);
+        thefunc.increaseArraySize(101);
         thefunc.findKey("101");
 
         thefunc.displayTheStack();
@@ -126,7 +132,7 @@ public class HashTable {
     void displayTheStack(){
         int increment = 0;
 
-        for (int m = 0; m < 3; m++){
+        for (int m = 0; m < 10; m++){
             increment += 10;
 
             for (int n = 0; n < 71; n++){

@@ -3,7 +3,7 @@ package StackAndQueues;
 import java.util.Arrays;
 
 //!Ask Paul if is there a way to not give stack size
-public class TheStacks <T>{
+public class TheStacksWithArray<T>{
 
     private T[] stackArray;
 
@@ -11,7 +11,7 @@ public class TheStacks <T>{
 
     private int topOfStack = -1;
 
-    TheStacks(int size){
+    TheStacksWithArray(int size){
         stackSize = size;
         stackArray = (T[]) new Object[stackSize];
         Arrays.fill(stackArray, "-1");
@@ -96,7 +96,7 @@ public class TheStacks <T>{
 
     public static void main(String[] args){
 
-        TheStacks<String> stack = new TheStacks<>(10);
+        TheStacksWithArray<String> stack = new TheStacksWithArray<>(10);
         stack.push("10");
         stack.push("15");
         stack.pushMany("2 45 65 76 89");
