@@ -87,4 +87,16 @@ public class LinkedList <K>{
 
     }
 
+    //Method to reverse a LinkedList
+    Node reverseLinkedList(Node head){
+        Node newHead = null;
+        while (head != null){
+            Node temp = head.next;
+            head.next = newHead;
+            newHead = head;
+            head = temp;
+        }
+        return newHead;
+    }
+
 }
