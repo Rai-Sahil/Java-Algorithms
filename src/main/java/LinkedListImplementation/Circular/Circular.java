@@ -15,9 +15,9 @@ public class Circular {
             size++;
             return;
         }
+        tail.next = node;
         node.next = head;
         head = node;
-        tail.next = head;
         size++;
     }
 
@@ -56,6 +56,23 @@ public class Circular {
             n = n.next;
         }
         System.out.println(n.data);
+    }
+
+    boolean circularCheck(){
+        //Start the pointer after head.
+        Node temp = head.next;
+
+        //Using for loop keep incremeenting the pointer until it hits either null or head
+        while(temp != null && temp != head){
+            temp = temp.next;
+        }
+        //If it hits any one of those
+        if (temp == null){
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
     public static void main (String[] args){

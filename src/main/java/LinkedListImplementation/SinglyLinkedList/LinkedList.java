@@ -87,5 +87,36 @@ public class LinkedList <K>{
 
     }
 
-    //Add reverse linkedList
+    Node reverse(){
+        Node current = head;
+        Node prev = null;
+
+        while(current != null){
+            Node forward = current.next;
+            current.next = prev;
+            prev = current;
+            current = forward;
+        }
+        return prev;
+    }
+
+    //Understand this
+    Node reverseRecursion(){
+        Node current = head;
+        Node prev = null;
+        recursion(head, current, null);
+        return head;
+    }
+
+    void recursion(Node head, Node current, Node prev){
+        //Base Case
+        if(current == null){
+            head = prev;
+            return;
+        }
+        Node forward = current.next;
+        recursion(head, forward, current);
+        current.next = prev;
+    }
+
 }

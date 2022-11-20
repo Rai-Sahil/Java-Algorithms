@@ -17,8 +17,9 @@ public class Runner {
 
         list.deleteAt(4);
 
-        list.show();
-        //list.rotateList(list.head, 2);
+        //list.show();
+
+        list.head = list.reverseRecursion();
         list.show();
     }
 }

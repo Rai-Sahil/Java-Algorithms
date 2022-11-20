@@ -30,10 +30,11 @@ public class DoublyLinkedList {
             n = n.next;
         }
         Node temp = n.next;
-        node.next = temp;
         temp.prev = node;
         node.prev = n;
         n.next = node;
+        node.next = temp;
+
     }
 
     void insertAtTail(int data){
