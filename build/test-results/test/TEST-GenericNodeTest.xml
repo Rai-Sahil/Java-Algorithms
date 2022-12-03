@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GenericNodeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-11-17T00:05:32" hostname="DESKTOP-2KRJOD4" time="0.063">
+<testsuite name="GenericNodeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-03T08:51:01" hostname="DESKTOP-2KRJOD4" time="0.028">
   <properties/>
-  <testcase name="testValue()" classname="GenericNodeTest" time="0.056"/>
-  <testcase name="testLinkedList()" classname="GenericNodeTest" time="0.004"/>
+  <testcase name="testValue()" classname="GenericNodeTest" time="0.025"/>
+  <testcase name="testLinkedList()" classname="GenericNodeTest" time="0.001"/>
   <system-out><![CDATA[
 Test Successfully Passed --------------------------------------------------------------------------------------------------------
 Test Successfully Passed --------------------------------------------------------------------------------------------------------

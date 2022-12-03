@@ -113,7 +113,7 @@ public class HashTable {
 
     public static void main(String[] args){
         //*Using prime number for size decreases collision
-        HashTable thefunc = new HashTable(62);
+        HashTable thefunc = new HashTable(61);
 //        String[] element = {"1", "3", "5", "21" , "19"};
 //
 //        thefunc.hashFunction(element, thefunc.theArray);
