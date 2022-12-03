@@ -1,5 +1,12 @@
 package Hashmapping.HashMapImplementation;
 
+/**
+ * Hash Map is implemented using array and array of linkedList.
+ * References: <a href="https://www.youtube.com/watch?v=1Ovg3IC-p5A&t=1271s">CLick</a>
+ *
+ * @param <K>
+ * @param <V>
+ */
 public class myHashMap<K, V> {
     private final int SIZE = 2;
 
