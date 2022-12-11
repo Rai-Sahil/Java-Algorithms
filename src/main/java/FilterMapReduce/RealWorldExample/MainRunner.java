@@ -20,8 +20,9 @@ public class MainRunner {
                 .reduce(Integer::sum).get();
         System.out.println(sumOfSalaray);
 
-        ArrayList<Integer> arr = new ArrayList<>();
-        int[] arr2 = new int[10];
-        int x = arr2[arr2.length - 1];
+        String name = AddingEmployees.multiple().stream()
+                .filter(employees -> employees.Grade == 'A')
+                .map(employees -> employees.Name).toString();
+        System.out.println(name);
     }
 }

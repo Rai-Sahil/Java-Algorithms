@@ -39,6 +39,7 @@ public class StockGrabber implements Subject{
         for (Observer observers : observer){
             observers.update(ibmPrice, aaplPrice, googPrice);
         }
+        
     }
 
     public void setIbmPrice(double newIBMPrice){

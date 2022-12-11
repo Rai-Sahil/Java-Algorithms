@@ -43,7 +43,7 @@ public class BasicReducing {
         int maxValue = numbers.stream().reduce(Integer::max).get();
         System.out.println(maxValue);
 
-        //TODO REDUCE METOD FOR LIST OF STRINGS
+        //TODO REDUCE METHOD FOR LIST OF STRINGS
         //Always wrap the values coming out of reduce in String using String.valueOf(), as it will not output, only for string
         String s = String.valueOf(words.stream().reduce((word1, word2) -> word1.length() > word2.length() ? word1 : word2));
         System.out.println(s);

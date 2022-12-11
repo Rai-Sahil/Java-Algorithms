@@ -4,7 +4,6 @@ import java.sql.SQLOutput;
 import java.util.Iterator;
 
 public class DiscJockey {
-
     SongIterator iter70;
     SongIterator iter80;
     SongIterator iter90;

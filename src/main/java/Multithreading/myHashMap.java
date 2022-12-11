@@ -1,4 +1,4 @@
-package Hashmapping.HashMapImplementation;
+package Multithreading;
 
 /**
  * Hash Map is implemented using array and array of linkedList.
@@ -10,9 +10,7 @@ package Hashmapping.HashMapImplementation;
  */
 public class myHashMap<K, V> {
     private final int SIZE = 2;
-
     private Entry<K, V> table[];
-
     public myHashMap() {
         table = new Entry[SIZE];
     }
@@ -86,13 +84,4 @@ public class myHashMap<K, V> {
         return null;
     }
 
-    public static void main(String[] args) {
-        myHashMap<Integer, String> hash = new myHashMap<>();
-        hash.put(1, "hello");
-        hash.put(2, "World");
-        hash.put(3, "Sahil");
-        hash.put(4, "suuuiiii");
-
-        System.out.println(hash.get(4));
-    }
 }
