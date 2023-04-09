@@ -14,5 +14,15 @@ public class Hashset {
         Set<String> set = new HashSet<>(list);
         System.out.printf("%s ", set);
 
+        HashSet<Integer> hash = new HashSet<>();
+        hash.add(1);
+        hash.add(2);
+        hash.add(101);
+
+        for (int i = 100; i < 106 && hash.contains(i); i++){
+            hash.add(i);
+        }
+
+        System.out.println(hash.contains(101));
     }
 }

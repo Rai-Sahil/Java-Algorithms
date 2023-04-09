@@ -11,7 +11,7 @@ package Hashmapping.HashMapImplementation;
 public class myHashMap<K, V> {
     private final int SIZE = 2;
 
-    private Entry<K, V> table[];
+    private final Entry<K, V>[] table;
 
     public myHashMap() {
         table = new Entry[SIZE];
@@ -21,26 +21,26 @@ public class myHashMap<K, V> {
         // Map hash into an array using modulus
         int hash = key.hashCode() % 2; // Can be any number b/w 0 and 7
 
-        Entry<K, V> e = table[hash];
+        Entry<K, V> entry = table[hash];
 
-        if (e == null) {
+        if (entry == null) {
             table[hash] = new Entry<>(key, value);
             return;
         } else {
             // traverse through the LL present there
-            while (e.next != null) {
-                if (e.getKey() == key) {
-                    e.setValue(value);
+            while (entry.next != null) {
+                if (entry.getKey() == key) {
+                    entry.setValue(value);
                     return;
                 }
-                e = e.next;
+                entry = entry.next;
             }
 
-            if (e.getKey() == key) {
-                e.setValue(value);
+            if (entry.getKey() == key) {
+                entry.setValue(value);
                 return;
             }
-            e.next = new Entry<K, V>(key, value);
+            entry.next = new Entry<K, V>(key, value);
         }
 
     }

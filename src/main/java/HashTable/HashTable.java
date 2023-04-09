@@ -3,6 +3,7 @@ package HashTable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Objects;
 
 public class HashTable {
 
@@ -37,7 +38,7 @@ public class HashTable {
             int arrayIndex = Integer.parseInt(newElement) % 29;
             System.out.print("Modulus Index " + arrayIndex + " for value " + newElement + "\n");
 
-            while (theArray[arrayIndex] != "-1"){
+            while (!Objects.equals(theArray[arrayIndex], "-1")){
                 ++arrayIndex;
                 System.out.println("Collison Try" + arrayIndex + " Instead\n");
                 arrayIndex %= arraySize;
