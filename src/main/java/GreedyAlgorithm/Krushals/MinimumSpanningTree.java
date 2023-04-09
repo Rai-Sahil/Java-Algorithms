@@ -40,7 +40,7 @@ public class MinimumSpanningTree {
         ArrayList<Integer> parent = new ArrayList<>();
         ArrayList<Integer> rank = new ArrayList<>();
 
-        IntStream.range(0, edges.size()).forEach(i -> parent.add(i));
+        IntStream.range(0, edges.size()).forEach(parent::add);
         IntStream.range(0, edges.size()).forEach(i -> rank.add(0));
 
         int totalWeight = 0;
