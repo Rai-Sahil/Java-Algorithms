@@ -1,9 +1,9 @@
 package GreedyAlgorithm.Krushals;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class MinimumSpanningTree {
@@ -43,22 +43,20 @@ public class MinimumSpanningTree {
         IntStream.range(0, edges.size()).forEach(parent::add);
         IntStream.range(0, edges.size()).forEach(i -> rank.add(0));
 
-        int totalWeight = 0;
+        AtomicInteger totalWeight = new AtomicInteger();
 
-        for (int i = 0; i < edges.size(); i++){
-            Node temp = edges.get(i);
+        edges.forEach(temp -> {
             int parentEdge1 = findParent(parent, temp.getEdges1());
             int parentEdge2 = findParent(parent, temp.getEdges2());
-
             int weight = temp.getWeight();
 
-            if (parentEdge1 != parentEdge2){
-                totalWeight += weight;
+            if (parentEdge1 != parentEdge2) {
+                totalWeight.addAndGet(weight);
                 union(parent, rank, parentEdge1, parentEdge2);
             }
-        }
+        });
 
-        return totalWeight;
+        return totalWeight.get();
     }
 
     public static void main(String[] args) {
