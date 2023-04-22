@@ -2,15 +2,12 @@ package DynamicProgramming;
 
 import java.util.Arrays;
 
-/**
- * This is using DP
- */
-public class Fibonnaci {
+public class Fibonacci {
 
     int number;
     int[] array;
 
-    Fibonnaci(int number) {
+    Fibonacci(int number) {
         this.number = number;
         this.array = new int[number];
     }
@@ -30,7 +27,7 @@ public class Fibonnaci {
     public int[] getArray() { return array; }
 
     public static void main(String[] args) {
-        Fibonnaci fib = new Fibonnaci(5);
+        Fibonacci fib = new Fibonacci(5);
         System.out.println(fib.generate_new_fib());
         System.out.println(Arrays.toString(fib.getArray()));
     }
