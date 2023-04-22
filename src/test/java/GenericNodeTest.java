@@ -1,4 +1,4 @@
-import org.example.GenericandLinkedListPractice.GenericNode;
+import GnericsandLinkedList.GenericNode;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

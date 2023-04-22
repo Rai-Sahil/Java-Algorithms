@@ -15,7 +15,7 @@ public class Fibonnaci {
         this.array = new int[number];
     }
 
-    public int run(){
+    public int generate_new_fib(){
         if(number <= 1){ return number; }
         array[0] = 0;
         array[1] = 1;
@@ -31,7 +31,7 @@ public class Fibonnaci {
 
     public static void main(String[] args) {
         Fibonnaci fib = new Fibonnaci(5);
-        System.out.println(fib.run());
+        System.out.println(fib.generate_new_fib());
         System.out.println(Arrays.toString(fib.getArray()));
     }
 
