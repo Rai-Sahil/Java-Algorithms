@@ -1,4 +1,4 @@
-package Trees.BinarySearchTree;
+package main.java.Trees.BinarySearchTree;
 
 public class BinaryTree<K, V> {
 

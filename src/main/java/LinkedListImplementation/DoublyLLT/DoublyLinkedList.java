@@ -1,4 +1,4 @@
-package LinkedListImplementation.DoublyLLT;
+package main.java.LinkedListImplementation.DoublyLLT;
 
 public class DoublyLinkedList {
 

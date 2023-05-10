@@ -1,4 +1,4 @@
-package LinkedListImplementation.SinglyLinkedList;
+package main.java.LinkedListImplementation.SinglyLinkedList;
 
 public class LinkedList <K>{
     //TODO Every list will have 1 thing which will be Node

@@ -1,4 +1,4 @@
-package FilterMapReduce;
+package main.java.FilterMapReduce;
 
 import java.util.ArrayList;
 import java.util.Arrays;

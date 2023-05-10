@@ -1,4 +1,4 @@
-package GnericsandLinkedList;
+package main.java.GnericsandLinkedList;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package StackAndQueues.UsingArrays;
+package main.java.StackAndQueues.UsingArrays;
 
 import java.util.Arrays;
 

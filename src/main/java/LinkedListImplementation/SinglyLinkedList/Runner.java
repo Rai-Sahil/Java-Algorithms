@@ -1,6 +1,4 @@
-package LinkedListImplementation.SinglyLinkedList;
-
-import LinkedListImplementation.SinglyLinkedList.LinkedList;
+package main.java.LinkedListImplementation.SinglyLinkedList;
 
 public class Runner {
     public static void main(String[] args){

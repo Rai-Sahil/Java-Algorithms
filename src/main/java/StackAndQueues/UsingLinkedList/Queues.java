@@ -1,4 +1,4 @@
-package StackAndQueues.UsingLinkedList;
+package main.java.StackAndQueues.UsingLinkedList;
 
 /**
  * First In First Out. means the first element in should be the first element out.

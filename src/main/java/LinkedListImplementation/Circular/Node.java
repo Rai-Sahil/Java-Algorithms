@@ -1,4 +1,4 @@
-package LinkedListImplementation.Circular;
+package main.java.LinkedListImplementation.Circular;
 
 public class Node {
     int data;

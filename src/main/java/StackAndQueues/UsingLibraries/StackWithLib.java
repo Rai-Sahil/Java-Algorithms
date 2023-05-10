@@ -1,4 +1,4 @@
-package StackAndQueues.UsingLibraries;
+package main.java.StackAndQueues.UsingLibraries;
 
 import java.util.ArrayList;
 import java.util.List;

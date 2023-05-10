@@ -1,4 +1,4 @@
-package SocketServers.OneWayCommunication;
+package main.java.SocketServers.OneWayCommunication;
 
 import java.io.IOException;
 import java.io.PrintWriter;

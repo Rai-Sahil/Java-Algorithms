@@ -1,4 +1,4 @@
-package GreedyAlgorithm.Krushals;
+package main.java.GreedyAlgorithm.Krushals;
 
 public class DisjointSet {
 

@@ -1,4 +1,4 @@
-package StackAndQueues.UsingLinkedList;
+package main.java.StackAndQueues.UsingLinkedList;
 
 //*Last is First Out
 public class Stacks {

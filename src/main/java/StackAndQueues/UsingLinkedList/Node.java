@@ -1,4 +1,4 @@
-package StackAndQueues.UsingLinkedList;
+package main.java.StackAndQueues.UsingLinkedList;
 
 public class Node {
     int data;

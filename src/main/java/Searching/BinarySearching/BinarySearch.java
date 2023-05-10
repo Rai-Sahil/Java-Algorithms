@@ -1,4 +1,4 @@
-package Searching.BinarySearching;
+package main.java.Searching.BinarySearching;
 
 public class BinarySearch {
 

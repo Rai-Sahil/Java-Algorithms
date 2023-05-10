@@ -1,4 +1,4 @@
-package GreedyAlgorithm.Dijkstras;
+package main.java.GreedyAlgorithm.Dijkstras;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

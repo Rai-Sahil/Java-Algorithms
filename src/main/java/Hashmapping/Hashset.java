@@ -1,4 +1,4 @@
-package Hashmapping;
+package main.java.Hashmapping;
 
 import java.sql.SQLOutput;
 import java.util.*;

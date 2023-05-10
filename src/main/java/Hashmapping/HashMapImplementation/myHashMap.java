@@ -1,4 +1,4 @@
-package Hashmapping.HashMapImplementation;
+package main.java.Hashmapping.HashMapImplementation;
 
 /**
  * Hash Map is implemented using array and array of linkedList.

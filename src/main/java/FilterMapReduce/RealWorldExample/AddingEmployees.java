@@ -1,4 +1,4 @@
-package FilterMapReduce.RealWorldExample;
+package main.java.FilterMapReduce.RealWorldExample;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

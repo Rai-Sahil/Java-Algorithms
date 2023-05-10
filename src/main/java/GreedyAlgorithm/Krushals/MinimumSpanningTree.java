@@ -1,4 +1,4 @@
-package GreedyAlgorithm.Krushals;
+package main.java.GreedyAlgorithm.Krushals;
 
 import java.util.ArrayList;
 import java.util.Comparator;
