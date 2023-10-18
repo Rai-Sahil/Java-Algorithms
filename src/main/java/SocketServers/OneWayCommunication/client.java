@@ -8,7 +8,6 @@ public class client {
     public static void main(String[] args) throws IOException {
         try{
             Socket s = new Socket("LocalHost", 4999);
-            //? What does get output stream do?
             PrintWriter pr = new PrintWriter(s.getOutputStream());
             pr.println("Hello World ");
             pr.flush();

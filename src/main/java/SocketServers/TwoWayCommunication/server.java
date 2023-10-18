@@ -1,4 +1,4 @@
-package main.java.SocketServers.TwoWayCommunication;
+package SocketServers.TwoWayCommunication;
 
 import java.io.BufferedReader;
 import java.io.IOException;

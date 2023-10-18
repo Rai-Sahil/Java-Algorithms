@@ -1,4 +1,4 @@
-package main.java.HashTable;
+package HashTable;
 
 import java.util.ArrayList;
 import java.util.Arrays;

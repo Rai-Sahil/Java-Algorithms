@@ -1,4 +1,4 @@
-package main.java.GnericsandLinkedList;
+package GnericsandLinkedList;
 
 public class GenericNode<T> {
 
